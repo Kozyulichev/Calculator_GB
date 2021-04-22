@@ -63,6 +63,9 @@ public class Calculator {
                 case R.id.numbDot:
                     inputStr.append(",");
                     break;
+                case R.id.numbPlusOrMinus:
+                    inputStr.append("-");
+                    break;
             }
 
         }
@@ -86,6 +89,9 @@ public class Calculator {
                 case R.id.numbX:
                     inputStr.append(firstNumb * secondNumb);
                     break;
+                case R.id.numbProcent:
+                    inputStr.append(firstNumb*secondNumb/100);
+                    break;
 
             }
 
@@ -108,6 +114,9 @@ public class Calculator {
                     break;
                 case R.id.numbSumm:
                     actionSelected = R.id.numbSumm;
+                    break;
+                case R.id.numbProcent:
+                    actionSelected=R.id.numbProcent;
                     break;
             }
         }

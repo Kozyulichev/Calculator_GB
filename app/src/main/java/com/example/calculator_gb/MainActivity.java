@@ -1,6 +1,7 @@
 package com.example.calculator_gb;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -14,10 +15,12 @@ public class MainActivity extends AppCompatActivity {
     private TextView text;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY);
 
 
         int[] numbers = new int[]{
@@ -31,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
                 R.id.numb7,
                 R.id.numb8,
                 R.id.numb9,
-                R.id.numbDot
+                R.id.numbDot,
+                R.id.numbPlusOrMinus
         };
 
         int[] actions = new int[]{
@@ -40,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.numbMin,
                 R.id.numbDel,
                 R.id.numbSumm,
+                R.id.numbProcent
 
         };
         text = findViewById(R.id.summ);
