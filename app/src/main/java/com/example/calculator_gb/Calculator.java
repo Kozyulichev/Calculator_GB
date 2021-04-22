@@ -60,6 +60,9 @@ public class Calculator {
                 case R.id.numb9:
                     inputStr.append("9");
                     break;
+                case R.id.numbDot:
+                    inputStr.append(",");
+                    break;
             }
 
         }
@@ -114,5 +117,9 @@ public class Calculator {
 
     public String getText() {
         return inputStr.toString();
+    }
+    public void reset(){
+        state=State.firstNumbInput;
+        inputStr.setLength(0);
     }
 }

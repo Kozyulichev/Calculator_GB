@@ -5,242 +5,173 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
 
     <TextView
-        android:layout_marginTop="200sp"
-        app:layout_constraintStart_toStartOf="@id/numbAC"
-        app:layout_constraintEnd_toEndOf="@id/numbDel"
         android:id="@+id/summ"
-        app:layout_constraintBottom_toTopOf="@+id/numbAC"
         android:layout_width="0sp"
         android:layout_height="100sp"
+        android:layout_marginTop="200sp"
         android:inputType="numberDecimal"
-        android:textSize="35sp"
         android:textColor="@color/white"
+        android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/numbAC"
+        app:layout_constraintEnd_toEndOf="@id/numbDel"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@id/numbAC"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/numbAC"
-        app:layout_constraintTop_toBottomOf="@+id/summ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/grey"
+        style="@style/calculator_top_button"
         android:text="@string/ac"
-        android:textSize="35sp"
-        tools:ignore="MissingConstraints"
-        android:background="@drawable/roundedbutton"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/summ"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/numbPlusOrMinus"
-        android:layout_marginStart="5sp"
-        app:layout_constraintTop_toBottomOf="@+id/summ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/grey"
+        style="@style/calculator_top_button"
         android:text="@string/plusOrMinus"
         app:layout_constraintLeft_toRightOf="@id/numbAC"
-        tools:ignore="MissingConstraints"
-        android:textSize="35sp"/>
+        app:layout_constraintTop_toBottomOf="@+id/summ"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/numbProcent"
-        android:layout_marginStart="5sp"
-        app:layout_constraintTop_toBottomOf="@+id/summ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/grey"
+        style="@style/calculator_top_button"
         android:text="@string/Procent"
         app:layout_constraintLeft_toRightOf="@id/numbPlusOrMinus"
-        tools:ignore="MissingConstraints"
-        android:textSize="35sp"/>
+        app:layout_constraintTop_toBottomOf="@+id/summ"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/numbDel"
-        android:layout_marginStart="5sp"
-        app:layout_constraintTop_toBottomOf="@+id/summ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/orane"
+        style="@style/calculator_action_button"
         android:text="@string/chertochka"
         app:layout_constraintLeft_toRightOf="@id/numbProcent"
-        tools:ignore="MissingConstraints"
-        android:textSize="35sp"/>
+        app:layout_constraintTop_toBottomOf="@+id/summ"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/numb7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/darkGrey"
+        style="@style/calculator_button"
         android:text="@string/seven"
         app:layout_constraintTop_toBottomOf="@id/numbAC"
-        tools:ignore="MissingConstraints"
-        android:textSize="35sp"/>
+        tools:ignore="MissingConstraints" />
 
     <Button
-        android:layout_marginStart="5sp"
         android:id="@+id/numb8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/darkGrey"
+        style="@style/calculator_button"
         android:text="@string/eight"
         app:layout_constraintLeft_toRightOf="@id/numb7"
         app:layout_constraintTop_toBottomOf="@id/numbPlusOrMinus"
-        tools:ignore="MissingConstraints"
-        android:textSize="35sp"/>
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/numb9"
-        android:layout_marginStart="5sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/darkGrey"
+        style="@style/calculator_button"
         android:text="@string/nine"
         app:layout_constraintLeft_toRightOf="@id/numb8"
         app:layout_constraintTop_toBottomOf="@id/numbProcent"
-        tools:ignore="MissingConstraints"
-        android:textSize="35sp"/>
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/numbX"
-        android:layout_marginStart="5sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/orane"
+        style="@style/calculator_action_button"
         android:text="@string/x"
         app:layout_constraintLeft_toRightOf="@id/numb9"
         app:layout_constraintTop_toBottomOf="@id/numbDel"
-        tools:ignore="MissingConstraints"
-        android:textSize="35sp"/>
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/numb4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/darkGrey"
+        style="@style/calculator_button"
         android:text="@string/four"
         app:layout_constraintTop_toBottomOf="@id/numb7"
-        tools:ignore="MissingConstraints"
-        android:textSize="35sp"/>
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/numb5"
-        android:layout_marginStart="5sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/darkGrey"
+        style="@style/calculator_button"
         android:text="@string/five"
         app:layout_constraintLeft_toRightOf="@id/numb4"
         app:layout_constraintTop_toBottomOf="@id/numb8"
-        tools:ignore="MissingConstraints"
-        android:textSize="35sp"/>
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/numb6"
-        android:layout_marginStart="5sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/darkGrey"
+        style="@style/calculator_button"
         android:text="@string/six"
         app:layout_constraintLeft_toRightOf="@id/numb5"
         app:layout_constraintTop_toBottomOf="@id/numb9"
-        tools:ignore="MissingConstraints"
-        android:textSize="35sp"/>
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/numbMin"
-        android:layout_marginStart="5sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/orane"
+        style="@style/calculator_action_button"
         android:text="@string/minus"
         app:layout_constraintLeft_toRightOf="@id/numb6"
         app:layout_constraintTop_toBottomOf="@id/numbX"
-        tools:ignore="MissingConstraints"
-        android:textSize="35sp"/>
+        tools:ignore="MissingConstraints" />
 
 
     <Button
         android:id="@+id/nubm1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/darkGrey"
+        style="@style/calculator_button"
         android:text="@string/one"
         app:layout_constraintTop_toBottomOf="@id/numb4"
-        tools:ignore="MissingConstraints"
-        android:textSize="35sp"/>
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/numb2"
-        android:layout_marginStart="5sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/darkGrey"
+        style="@style/calculator_button"
         android:text="@string/two"
         app:layout_constraintLeft_toRightOf="@id/nubm1"
-        app:layout_constraintTop_toBottomOf="@id/numb5"
-        android:textSize="35sp"/>
+        app:layout_constraintTop_toBottomOf="@id/numb5" />
 
     <Button
         android:id="@+id/numb3"
-        android:layout_marginStart="5sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/darkGrey"
+        style="@style/calculator_button"
         android:text="@string/three"
         app:layout_constraintLeft_toRightOf="@id/numb2"
-        app:layout_constraintTop_toBottomOf="@id/numb6"
-        android:textSize="35sp"/>
+        app:layout_constraintTop_toBottomOf="@id/numb6" />
 
     <Button
         android:id="@+id/numbPlus"
-        android:layout_marginStart="5sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/orane"
+        style="@style/calculator_action_button"
         android:text="@string/plus"
         app:layout_constraintLeft_toRightOf="@id/numb3"
-        app:layout_constraintTop_toBottomOf="@id/numbMin"
-        android:textSize="35sp"/>
+        app:layout_constraintTop_toBottomOf="@id/numbMin" />
 
     <Button
         android:id="@+id/numb0"
         android:layout_width="0sp"
-        app:layout_constraintStart_toStartOf="@id/nubm1"
-        app:layout_constraintEnd_toEndOf="@id/numb2"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/darkGrey"
         android:text="@string/zero"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="@id/numb2"
+        app:layout_constraintStart_toStartOf="@id/nubm1"
         app:layout_constraintTop_toBottomOf="@id/nubm1"
-        tools:ignore="MissingConstraints"
-        android:textSize="35sp"/>
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/numbDot"
-        android:layout_marginStart="5sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/darkGrey"
+        style="@style/calculator_button"
         android:text="@string/doth"
         app:layout_constraintLeft_toRightOf="@id/numb0"
-        app:layout_constraintTop_toBottomOf="@id/numb3"
-        android:textSize="35sp"/>
+        app:layout_constraintTop_toBottomOf="@id/numb3" />
 
     <Button
         android:id="@+id/numbSumm"
-        android:layout_marginStart="5sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/orane"
+        style="@style/calculator_action_button"
         android:text="@string/summ"
         app:layout_constraintLeft_toRightOf="@id/numbDot"
-        app:layout_constraintTop_toBottomOf="@id/numbPlus"
-        android:textSize="35sp"/>
+        app:layout_constraintTop_toBottomOf="@id/numbPlus" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.numbPlus,
                 R.id.numbMin,
                 R.id.numbDel,
-                R.id.numbSumm
+                R.id.numbSumm,
 
         };
         text = findViewById(R.id.summ);
@@ -70,6 +70,14 @@ public class MainActivity extends AppCompatActivity {
             findViewById(actions[i]).setOnClickListener(actionButtonOnClickListener);
 
         }
+
+        findViewById(R.id.numbAC).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calculator.reset();
+                text.setText(calculator.getText());
+            }
+        });
 
     }
 }
