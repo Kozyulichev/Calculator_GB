@@ -1,8 +1,8 @@
 package com.example.calculator_gb;
 
 public class Calculator {
-    private int firstNumb;
-    private int secondNumb;
+    private double firstNumb;
+    private double secondNumb;
 
     private StringBuilder inputStr = new StringBuilder();
     private int actionSelected;
@@ -29,9 +29,7 @@ public class Calculator {
         if (inputStr.length() < 9) {
             switch (buttonId) {
                 case R.id.numb0:
-                    if (inputStr.length() != 0) {
-                        inputStr.append("0");
-                    }
+                    inputStr.append("0");
                     break;
                 case R.id.nubm1:
                     inputStr.append("1");
@@ -61,7 +59,7 @@ public class Calculator {
                     inputStr.append("9");
                     break;
                 case R.id.numbDot:
-                    inputStr.append(",");
+                    inputStr.append(".");
                     break;
                 case R.id.numbPlusOrMinus:
                     inputStr.append("-");
@@ -73,7 +71,7 @@ public class Calculator {
 
     public void onActionPressed(int actionId) {
         if (actionId == R.id.numbSumm && state == State.secondNumbInput && inputStr.length() > 0) {
-            secondNumb = Integer.parseInt(inputStr.toString());
+            secondNumb = Double.parseDouble(inputStr.toString());
             state = State.resultShow;
             inputStr.setLength(0);
             switch (actionSelected) {
@@ -96,7 +94,7 @@ public class Calculator {
             }
 
         } else if (inputStr.length() > 0 && state == State.firstNumbInput) {
-            firstNumb = Integer.parseInt(inputStr.toString());
+            firstNumb = Double.parseDouble(inputStr.toString());
             state = State.secondNumbInput;
             inputStr.setLength(0);
             switch (actionId) {

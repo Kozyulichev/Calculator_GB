@@ -13,4 +13,31 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="MyTheme" parent="Theme.AppCompat.DayNight"/>
+    <style name="calculator_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">35sp</item>
+        <item name="backgroundTint">@color/black</item>
+        <item name="android:layout_marginStart">5sp</item>
+        <item name="android:textColor">@color/orane</item>
+    </style>
+    <style name="calculator_action_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">5sp</item>
+        <item name="backgroundTint">@color/black</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textColor">@color/orane</item>
+
+    </style>
+    <style name="calculator_top_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">5sp</item>
+        <item name="backgroundTint">@color/black</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textColor">@color/orane</item>
+
+    </style>
 </resources>
