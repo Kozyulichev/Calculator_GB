@@ -59,7 +59,9 @@ public class Calculator {
                     inputStr.append("9");
                     break;
                 case R.id.numbDot:
-                    inputStr.append(".");
+                    if (inputStr.length() != 0) {
+                        inputStr.append(".");
+                    }
                     break;
                 case R.id.numbPlusOrMinus:
                     inputStr.append("-");
@@ -88,7 +90,7 @@ public class Calculator {
                     inputStr.append(firstNumb * secondNumb);
                     break;
                 case R.id.numbProcent:
-                    inputStr.append(firstNumb*secondNumb/100);
+                    inputStr.append(firstNumb * secondNumb / 100);
                     break;
 
             }
@@ -114,7 +116,7 @@ public class Calculator {
                     actionSelected = R.id.numbSumm;
                     break;
                 case R.id.numbProcent:
-                    actionSelected=R.id.numbProcent;
+                    actionSelected = R.id.numbProcent;
                     break;
             }
         }
@@ -125,8 +127,9 @@ public class Calculator {
     public String getText() {
         return inputStr.toString();
     }
-    public void reset(){
-        state=State.firstNumbInput;
+
+    public void reset() {
+        state = State.firstNumbInput;
         inputStr.setLength(0);
     }
 }

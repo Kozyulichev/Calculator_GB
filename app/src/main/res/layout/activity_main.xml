@@ -13,7 +13,7 @@
         android:id="@+id/summ"
         android:layout_width="0sp"
         android:layout_height="100sp"
-        android:layout_marginTop="200sp"
+        android:layout_marginTop="240sp"
         android:inputType="numberDecimal"
         android:textColor="@color/white"
         android:textSize="35sp"
@@ -25,14 +25,16 @@
         app:layout_constraintStart_toStartOf="@id/numbAC"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/numbAC"
         style="@style/calculator_top_button"
         android:text="@string/ac"
         app:layout_constraintTop_toBottomOf="@+id/summ"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginEnd="305sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/numbPlusOrMinus"
         style="@style/calculator_top_button"
         android:text="@string/plusOrMinus"
@@ -40,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/summ"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/numbProcent"
         style="@style/calculator_top_button"
         android:text="@string/Procent"
@@ -48,7 +50,7 @@
         app:layout_constraintTop_toBottomOf="@+id/summ"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/numbDel"
         style="@style/calculator_action_button"
         android:text="@string/chertochka"
@@ -56,14 +58,16 @@
         app:layout_constraintTop_toBottomOf="@+id/summ"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/numb7"
         style="@style/calculator_button"
         android:text="@string/seven"
         app:layout_constraintTop_toBottomOf="@id/numbAC"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginEnd="305sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/numb8"
         style="@style/calculator_button"
         android:text="@string/eight"
@@ -71,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@id/numbPlusOrMinus"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/numb9"
         style="@style/calculator_button"
         android:text="@string/nine"
@@ -79,7 +83,7 @@
         app:layout_constraintTop_toBottomOf="@id/numbProcent"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/numbX"
         style="@style/calculator_action_button"
         android:text="@string/x"
@@ -87,14 +91,16 @@
         app:layout_constraintTop_toBottomOf="@id/numbDel"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/numb4"
         style="@style/calculator_button"
         android:text="@string/four"
         app:layout_constraintTop_toBottomOf="@id/numb7"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginEnd="305sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/numb5"
         style="@style/calculator_button"
         android:text="@string/five"
@@ -110,7 +116,7 @@
         app:layout_constraintTop_toBottomOf="@id/numb9"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/numbMin"
         style="@style/calculator_action_button"
         android:text="@string/minus"
@@ -119,55 +125,55 @@
         tools:ignore="MissingConstraints" />
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/nubm1"
         style="@style/calculator_button"
         android:text="@string/one"
         app:layout_constraintTop_toBottomOf="@id/numb4"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginEnd="305sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/numb2"
         style="@style/calculator_button"
         android:text="@string/two"
         app:layout_constraintLeft_toRightOf="@id/nubm1"
         app:layout_constraintTop_toBottomOf="@id/numb5" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/numb3"
         style="@style/calculator_button"
         android:text="@string/three"
         app:layout_constraintLeft_toRightOf="@id/numb2"
         app:layout_constraintTop_toBottomOf="@id/numb6" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/numbPlus"
         style="@style/calculator_action_button"
         android:text="@string/plus"
         app:layout_constraintLeft_toRightOf="@id/numb3"
         app:layout_constraintTop_toBottomOf="@id/numbMin" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/numb0"
         android:layout_width="0sp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/darkGrey"
         android:text="@string/zero"
-        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="@id/numb2"
         app:layout_constraintStart_toStartOf="@id/nubm1"
         app:layout_constraintTop_toBottomOf="@id/nubm1"
         tools:ignore="MissingConstraints"
-        android:background="@drawable/ripple"/>
+        style="@style/calculator_button"
+        android:layout_marginStart="0sp"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/numbDot"
         style="@style/calculator_button"
         android:text="@string/doth"
         app:layout_constraintLeft_toRightOf="@id/numb0"
         app:layout_constraintTop_toBottomOf="@id/numb3" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/numbSumm"
         style="@style/calculator_action_button"
         android:text="@string/summ"
