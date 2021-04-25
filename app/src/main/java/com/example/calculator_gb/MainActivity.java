@@ -2,12 +2,20 @@ package com.example.calculator_gb;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
     private TextView text;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY);
 
 
@@ -84,5 +92,46 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        TextView textView = findViewById(R.id.summ);
+        Button btn1 = findViewById(R.id.nubm1);
+        Button btn2 = findViewById(R.id.numb2);
+        Button btn3 = findViewById(R.id.numb3);
+        Button btn4 = findViewById(R.id.numb4);
+        Button btn5 = findViewById(R.id.numb5);
+        Button btn6 = findViewById(R.id.numb6);
+        Button btn7 = findViewById(R.id.numb7);
+        Button btn8 = findViewById(R.id.numb8);
+        Button btn9 = findViewById(R.id.numb9);
+
+        Button[] btns = {btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9};
+
+        Intent getIntent = getIntent();
+
+        if (getIntent.hasExtra(Intent.EXTRA_TEXT) && getIntent.hasExtra(Intent.EXTRA_COMPONENT_NAME)) {
+            int getColorFromSettings = getIntent.getIntExtra(Intent.EXTRA_TEXT, 0);
+            int colorForButtons = getIntent.getIntExtra(Intent.EXTRA_COMPONENT_NAME, 0);
+            textView.setBackgroundColor(getColorFromSettings);
+
+            for (int i = 0; i < btns.length; i++) {
+                btns[i].setBackgroundColor(colorForButtons);
+            }
+        } else if (getIntent.hasExtra(Intent.EXTRA_PACKAGE_NAME) && getIntent.hasExtra(Intent.EXTRA_REFERRER)) {
+            int getColorFromSettings = getIntent.getIntExtra(Intent.EXTRA_PACKAGE_NAME, 0);
+            int colorForButtons = getIntent.getIntExtra(Intent.EXTRA_REFERRER, 0);
+            textView.setBackgroundColor(getColorFromSettings);
+
+            for (int i = 0; i < btns.length; i++) {
+                btns[i].setBackgroundColor(colorForButtons);
+
+            }
+
+        }
     }
+
+    public void ChangeToSettingsActivity(View view) {
+        Intent intent = new Intent(MainActivity.this, settings.class);
+        startActivity(intent);
+    }
+
 }

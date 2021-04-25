@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
     tools:context=".MainActivity"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:theme="@style/Theme.Calculator_GB">
 
     <TextView
         android:id="@+id/summ"
@@ -16,14 +16,24 @@
         android:layout_marginTop="240sp"
         android:inputType="numberDecimal"
         android:textColor="@color/white"
+        android:background="@color/black"
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/numbAC"
-        app:layout_constraintEnd_toEndOf="@id/numbDel"
+        app:layout_constraintEnd_toEndOf="@id/numbProcent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="@id/numbAC"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/settings"
+        style="@style/calculator_button"
+        app:layout_constraintStart_toEndOf="@+id/summ"
+        android:onClick="ChangeToSettingsActivity"
+        app:layout_constraintBottom_toTopOf="@id/numbDel"
+        android:text="@string/vertical_ellipsis"
+        />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/numbAC"
@@ -32,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/summ"
         android:layout_marginEnd="305sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/numbPlusOrMinus"
@@ -178,7 +188,7 @@
         style="@style/calculator_action_button"
         android:text="@string/summ"
         app:layout_constraintLeft_toRightOf="@id/numbDot"
-        app:layout_constraintTop_toBottomOf="@id/numbPlus" />
+        app:layout_constraintTop_toBottomOf="@id/numbPlus"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
